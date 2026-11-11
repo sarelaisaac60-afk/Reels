@@ -1,0 +1,9 @@
+{
+  "name": "TikReel - Videos Cortos y Reels",
+  "description": "Plataforma de videos cortos estilo TikTok y Reels: publica videos, reacciona con likes, comenta en tiempo real, comparte y descarga videos en tendencia.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

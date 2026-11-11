@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+/* Custom utility classes */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float-heart {
+  0% {
+    opacity: 1;
+    transform: scale(0.5) translateY(0) rotate(0deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.3) translateY(-40px) rotate(-10deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.6) translateY(-100px) rotate(15deg);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 5s linear infinite;
+}
+
+.animate-spin-paused {
+  animation-play-state: paused;
+}
+
+.animate-float-heart {
+  animation: float-heart 0.8s ease-out forwards;
+}
+
+.animate-pulse-recording {
+  animation: pulse-ring 1.5s infinite;
+}
